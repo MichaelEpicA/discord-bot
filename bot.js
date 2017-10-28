@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const prefix = "&"
+const prefix = "="
 
 var help = new Discord.RichEmbed()
   .addField("There are the commands" , "&ping checks bots connection".true)
@@ -63,7 +63,7 @@ bot.on("message", message => {
   const args = message.content.split(" ").slice(1);
 
 if (message.content.startsWith(prefix + "eval")) {
-    if(message.author.id !== "162587551721324544") return;
+    if(message.author.id !== "373660269983039498") return;
     try {
       var code = args.join(" ");
       var evaled = eval(code);
