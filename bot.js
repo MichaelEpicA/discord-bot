@@ -27,5 +27,22 @@ client.on('message', msg => {
   if(command === "help") {
 msg.channel.sendEmbed(help);
   }
+if(command === "kick") {
+  const reason = args.slice(1).join(' ');
+  const user = msg.mentions.users.first();
+  const modlog = bot.channels.find('name', 'mod-log');
+  if (!modlog) return msg.reply('I cannot find a mod-log channel');
+  if (reason.length < 1) return msg.reply('You must supply a reason for the kick.');
+  if (msg.mentions.users.size < 1) return msg.reply('You must mention someone to kick them.').catch(console.error);
+
+  if (!msg.guild.member(user).kickable) return msg.reply('I cannot kick that member');
+  msg.guild.member(user).kick();
+
+  const embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setTimestamp()
+    .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${msg.author.tag}\n**Reason:** ${reason}`);
+  return bot.channels.get(modlog.id).send({embed});
+}
 })
 client.login(process.env.BOT_TOKEN);
