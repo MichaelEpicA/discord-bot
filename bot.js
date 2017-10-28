@@ -72,7 +72,7 @@ if (message.content.startsWith(prefix + "eval")) {
         evaled = require("util").inspect(evaled);
 
         var embed = new Discord.RichEmbed()
-  .addField("Eval" , clean(evaled), {code:"xl"}.true)
+  .addField("Evaled code" , clean(evaled), {code:"xl"}.true)
   .setColor(0x0000FF)
 message.channel.sendEmbed(embed);
   } catch (err) {
