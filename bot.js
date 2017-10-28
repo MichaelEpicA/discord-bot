@@ -3,7 +3,10 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-});
+})
+client.on("message", function(msg){
+  console.log(`${msg.author}in #${msg.channel.name} or ${msg.guild.name} ${msg.content}`)
+})
 
 client.on('message', msg => {
   if(msg.author.bot || !msg.content.startsWith(prefix)) {
