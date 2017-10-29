@@ -77,7 +77,7 @@ if (message.content.startsWith(prefix + "eval")) {
 message.channel.sendEmbed(embed);
   } catch (err) {
   var error = new Discord.RichEmbed()
-  .addField("rip the bot has gone bankrupt" , `\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``.true)
+  .addField("rip the bot has been killed #fatalerror" , `\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``.true)
   .setColor(0x0000FF)
 message.channel.sendEmbed(error);
   }
