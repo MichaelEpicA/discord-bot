@@ -83,3 +83,28 @@ message.channel.sendEmbed(error);
   }
  }
 });
+
+bot.on("message", message => {
+  const args = message.content.split(" ").slice(1);
+
+if (message.content.startsWith(prefix + "eval")) {
+    if(message.author.id !== "162587551721324544") return;
+    try {
+      var code = args.join(" ");
+      var evaled = eval(code);
+
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
+
+        var embed = new Discord.RichEmbed()
+  .addField("There is the evaled code" , clean(evaled), {code:"xl"}.true)
+  .setColor(0x0000FF)
+message.channel.sendEmbed(embed);
+  } catch (err) {
+  var error = new Discord.RichEmbed()
+  .addField("rip there is a error" , `\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``.true)
+  .setColor(0x0000FF)
+message.channel.sendEmbed(error);
+  }
+ }
+});
