@@ -12,7 +12,7 @@ bot.on('ready', function() {
   console.log(`Ready as: ${bot.user.tag}`)
 })
 bot.on("message", function(msg){
-  console.log(`${msg.author}in #${msg.channel.name} or ${msg.guild.name} ${msg.content}`)
+  console.log(`${msg.author} ${msg.content}`)
 })
 
 bot.on("message",function(msg) {
@@ -72,7 +72,7 @@ if (message.content.startsWith(prefix + "eval")) {
         evaled = require("util").inspect(evaled);
 
         var embed = new Discord.RichEmbed()
-  .addField("The code is down there v" , clean(evaled), {code:"xl"}.true)
+  .addField("Evaled Code" , clean(evaled), {code:"xl"}.true)
   .setColor(0x0000FF)
 message.channel.sendEmbed(embed);
   } catch (err) {
