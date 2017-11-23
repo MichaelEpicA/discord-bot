@@ -2,6 +2,13 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = "="
 
+bot.on('ready', () => {
+  bot.user.setStatus('idle', 'online');
+	
+ bot.user.setPresence({ game: { name: 'Exploiting ROBLOX and eating Turkey', type: 0 } });
+});
+
+
 var help = new Discord.RichEmbed()
   .addField("There are the commands" , "&ping checks bots connection".true)
   .addField("&eval Only for owner".true)
