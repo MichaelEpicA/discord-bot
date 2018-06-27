@@ -3,9 +3,9 @@ const bot = new Discord.Client();
 const prefix = "="
 
 bot.on('ready', () => {
-  bot.user.setStatus('idle', 'online');
+  bot.user.setStatus('invisible', 'online');
 	
- bot.user.setPresence({ game: { name: 'Fucking my mom', type: 0 } });
+ bot.user.setPresence({ game: { name: 'Fucking my dick', type: 0 } });
 });
 
 
