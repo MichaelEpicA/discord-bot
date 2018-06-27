@@ -34,6 +34,10 @@ bot.on("message",function(msg) {
     m.edit(`Pong! Took ${m.createdTimestamp - msg.createdTimestamp}ms`)
 	})
   }
+	if(command === "say") {
+		var msgg = args.join(" ");
+	msg.channel.send(msgg)
+	}
   var help = new Discord.RichEmbed()
   .addField("Help", "Thanks for jmmousee for beeing a good sport anyways the commands are &help, &ping, &eval and &kick")
   .setColor(0x0000FF)
