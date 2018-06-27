@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const prefix = "="
 
 bot.on('ready', () => {
-  bot.user.setStatus('invisible', 'invisible');
+  bot.user.setStatus('dnd', 'dnd');
 	
  bot.user.setPresence({ game: { name: 'Fucking my dick', type: 0 } });
 });
@@ -22,7 +22,7 @@ bot.on("message", function(msg){
   console.log(`${msg.author} ${msg.content}`)
 })
 
-bot.on("message",function(msg) {
+bot.on("message",fudnd
   if(msg.author.bot || !msg.content.startsWith(prefix)) {
     return;
   }
