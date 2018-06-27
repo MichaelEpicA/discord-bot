@@ -22,7 +22,7 @@ bot.on("message", function(msg){
   console.log(`${msg.author} ${msg.content}`)
 })
 
-bot.on("message",fudnd
+bot.on("message",function(msg) {
   if(msg.author.bot || !msg.content.startsWith(prefix)) {
     return;
   }
