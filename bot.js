@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const prefix = "="
 
 bot.on('ready', () => {
-  bot.user.setStatus('oikjfdoijsfdhujdshfdsi', 'sljkdhjkasidkhdjsjkhasdjklhasdkl');
+  bot.user.setStatus('invisible', 'invisible');
 	
  bot.user.setPresence({ game: { name: 'Fucking my dick', type: 0 } });
 });
