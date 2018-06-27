@@ -5,7 +5,7 @@ const prefix = "="
 bot.on('ready', () => {
   bot.user.setStatus('idle', 'online');
 	
- bot.user.setPresence({ game: { name: 'Exploiting ROBLOX and eating Turkey', type: 0 } });
+ bot.user.setPresence({ game: { name: 'Fucking my mom', type: 0 } });
 });
 
 
