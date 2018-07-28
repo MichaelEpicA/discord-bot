@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const prefix = "="
 
 bot.on('ready', () => {
-  bot.user.setStatus('invisible', 'invisible');
+  bot.user.setStatus('online', 'online');
 	
  bot.user.setPresence({ game: { name: 'Hello', type: 0 } });
 });
