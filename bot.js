@@ -5,7 +5,7 @@ const prefix = "="
 bot.on('ready', () => {
   bot.user.setStatus('invisible', 'invisible');
 	
- bot.user.setPresence({ game: { name: 'Fucking my dick', type: 0 } });
+ bot.user.setPresence({ game: { name: 'Hello', type: 0 } });
 });
 
 
